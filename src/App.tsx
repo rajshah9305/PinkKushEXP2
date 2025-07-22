@@ -14,6 +14,12 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        {/* Animated background pattern */}
+        <div className="fixed inset-0 -z-10 h-full w-full">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,hsl(var(--primary)/0.2),transparent_40%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,hsl(var(--secondary)/0.2),transparent_40%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--accent)/0.1),transparent_60%)]" />
+        </div>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
